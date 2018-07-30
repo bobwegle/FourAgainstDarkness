@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\rwegl\OneDrive\Documents\SharpDevelop Projects\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\
 FourAgainstDarkness
 none
 false
 DEBUG;TRACE
-C:\Users\rwegl\OneDrive\Documents\SharpDevelop Projects\FourAgainstDarkness\FourAgainstDarkness\App.xaml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\App.xaml
 5861417193
 
 12-1823764830
-151061823145
+15-378775039
 Views\CharacterSheet.xaml;Views\ControlPanel.xaml;Views\NewCharacter.xaml;Views\PartyWin.xaml;Views\StoreWin.xaml;
 
-False
+True
 

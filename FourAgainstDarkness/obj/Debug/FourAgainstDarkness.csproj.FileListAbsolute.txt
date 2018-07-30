@@ -24,3 +24,29 @@ C:\Users\rwegl\OneDrive\Documents\SharpDevelop Projects\FourAgainstDarkness\Four
 C:\Users\rwegl\OneDrive\Documents\SharpDevelop Projects\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\ControlzEx.pdb
 C:\Users\rwegl\OneDrive\Documents\SharpDevelop Projects\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\MahApps.Metro.pdb
 C:\Users\rwegl\OneDrive\Documents\SharpDevelop Projects\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\MahApps.Metro.xml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\FourAgainstDarkness.exe.config
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\FourAgainstDarkness.exe
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\FourAgainstDarkness.pdb
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\ControlzEx.dll
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\MahApps.Metro.dll
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\ControlzEx.pdb
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\MahApps.Metro.pdb
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\bin\Debug\MahApps.Metro.xml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.csprojResolveAssemblyReference.cache
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\ControlPanel.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\NewCharacter.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\PartyWin.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\StoreWin.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\CharacterSheet.g.cs
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\ControlPanel.g.cs
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\NewCharacter.g.cs
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\PartyWin.g.cs
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\StoreWin.g.cs
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\App.g.cs
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness_MarkupCompile.cache
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness_MarkupCompile.lref
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\CharacterSheet.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.g.resources
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.exe
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.pdb
