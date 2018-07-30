@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="FourAgainstDarkness.Views.CharacterSheet" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="FourAgainstDarkness.Views" xmlns:local="clr-namespace:FourAgainstDarkness"
+	Width="850"
+	Height="616">
+	<Window.Resources>
+		<Image
+			x:Shared="false"
+			x:Key="Axe"
+			Source="../assets/axe.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Warrior"
+			Source="../assets/Warrior.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Barbarian"
+			Source="../assets/Barbarian.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Cleric"
+			Source="../assets/Cleric.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Dwarf"
+			Source="../assets/Dwarf.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Elf"
+			Source="../assets/Elf.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Halfling"
+			Source="../assets/Halfling.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Rogue"
+			Source="../assets/Rogue.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Wizard"
+			Source="../assets/Wizard.bmp" />
+	</Window.Resources>
+	<ScrollViewer>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="0.25*" />
+				<ColumnDefinition
+					Width="0.25*" />
+				<ColumnDefinition
+					Width="0.25*" />
+				<ColumnDefinition
+					Width="0.25*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Grid.Column="0"
+				Grid.Row="0"
+				HorizontalAlignment="Stretch"
+				Height="NaN"
+				VerticalAlignment="Stretch"
+				Width="NaN"
+				Margin="0,0,0,0"
+				x:Name="Panel1">
+				<Border
+					BorderThickness="1"
+					BorderBrush="Black"
+					Margin="0,0,0,0">
+					<StackPanel
+						Name="stack1"
+						Height="NaN"
+						Width="NaN"
+						Orientation="Horizontal"
+						Margin="0,0,0,0">
+						<Label
+							Content="Name:"
+							Height="NaN"
+							Width="NaN" />
+						<TextBox
+							Width="NaN"
+							Height="NaN"
+							Text="{Binding Name}"
+							VerticalContentAlignment="Center"
+							IsEnabled="True"
+							IsReadOnly="True" />
+						<Label
+							Content="Class:"
+							Height="NaN"
+							Width="NaN" />
+						<TextBox
+							Width="NaN"
+							Height="NaN"
+							Text="{Binding CharType}"
+							VerticalContentAlignment="Center"
+							IsReadOnly="True" />
+					</StackPanel>
+				</Border>
+				<StackPanel
+					Name="mainpanel1">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="0.5*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Border
+							Grid.Column="1"
+							BorderThickness="1"
+							BorderBrush="Black">
+							<StackPanel
+								Name="picpanel1"
+								Grid.Column="1"
+								Width="NaN"
+								Height="NaN"></StackPanel>
+						</Border>
+						<Border
+							BorderThickness="1"
+							BorderBrush="Black">
+							<StackPanel
+								Orientation="Vertical"
+								Grid.Column="0">
+								<StackPanel
+									Orientation="Horizontal">
+									<Label
+										Content="Level:  " />
+									<TextBox
+										Name="levelbox"
+										Margin="1"
+										VerticalContentAlignment="Center"
+										Text="{Binding Path=Level}" />
+									<Button
+										Margin="1"
+										Content="LevelUp"
+										x:Name="button3"
+										Click="button3_Click" />
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal">
+									<Label
+										Content="Life:" />
+									<TextBlock
+										Name="lifeblock"
+										Margin="1,1,5,1"
+										VerticalAlignment="Center">
+										<Run
+											Name="currliferun"
+											Text="{Binding Path=Currentlife}" />
+										<Run
+											Text="/" />
+										<Run
+											Name="liferun"
+											Text="{Binding Path=Life}" />
+									</TextBlock>
+									<Button
+										Margin="1"
+										Width="15"
+										Content="+"
+										x:Name="button2"
+										Click="button2_Click" />
+									<Button
+										Margin="1"
+										Width="15"
+										Content="-"
+										RenderTransformOrigin="0.5,0.5"
+										x:Name="button1"
+										Click="button1_Click" />
+								</StackPanel>
+							</StackPanel>
+						</Border>
+					</Grid>
+					<Border
+						BorderThickness="1"
+						BorderBrush="Black">
+						<StackPanel
+							Grid.Row="0"
+							Orientation="Horizontal">
+							<Label
+								Content="Gold:  "
+								Margin="1" />
+							<TextBox
+								Name="goldbox"
+								VerticalContentAlignment="Center"
+								Margin="1"
+								Text="{Binding Path=Gold}" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="+1"
+								x:Name="button4"
+								Click="GoldButtonClick" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="+10"
+								Click="GoldButtonClick" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="-1"
+								Click="GoldButtonClick" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="-10"
+								Click="GoldButtonClick" />
+						</StackPanel>
+					</Border>
+					<Label
+						Content="Equipment"
+						FontSize="12"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center" />
+					<DataGrid
+						Name="equipmentgrid"
+						ItemsSource="{Binding Path=Equipmentcarried}"
+						AutoGenerateColumns="false">
+						<DataGrid.Columns>
+							<DataGridTemplateColumn
+								Width="40">
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Image
+											Source="{Binding Path=EImage}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Label
+											Content="{Binding Name}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Label
+											Content="{Binding Weapontype}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Label
+											Content="{Binding Hand}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<CheckBox />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+						</DataGrid.Columns>
+					</DataGrid>
+					<Label
+						Content="Attack Notes"
+						FontSize="12"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center" />
+					<StackPanel
+						Orientation="vertical">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="0.75*" />
+								<ColumnDefinition
+									Width="0.25*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+							</Grid.RowDefinitions>
+							<Label
+								Content="Character Bonus"
+								Grid.Column="0"
+								Grid.Row="0" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="0"
+								Name="attackbonusbox"
+								Text="{Binding Path=Attackbonus}"
+								VerticalContentAlignment="center" />
+							<Label
+								Grid.Column="0"
+								Grid.Row="1"
+								Content="{Binding Path=Attacknotes}" />
+							<Label
+								Grid.Row="2"
+								Grid.Column="0"
+								Content="Equipment Bonus" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="2"
+								Text="{Binding Path=Equipattackbonus}"
+								VerticalContentAlignment="center" />
+							<Label
+								Grid.Column="0"
+								Grid.Row="3"
+								Content="{Binding Path=Equipattacknotes}" />
+						</Grid>
+					</StackPanel>
+					<Label
+						Content="Defense Notes"
+						FontSize="12"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center" />
+					<StackPanel
+						Orientation="vertical">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="0.75*" />
+								<ColumnDefinition
+									Width="0.25*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+							</Grid.RowDefinitions>
+							<Label
+								Content="Character Bonus"
+								Grid.Column="0"
+								Grid.Row="0" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="0"
+								Name="defensebonusbox"
+								Text="{Binding Path=Defensebonus}"
+								VerticalContentAlignment="center" />
+							<Label
+								Grid.Column="0"
+								Grid.Row="1"
+								Content="{Binding Path=Defensenotes}" />
+							<Label
+								Grid.Row="2"
+								Grid.Column="0"
+								Content="Equipment Bonus" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="2"
+								Text="{Binding Path=Equipdefensebonus}"
+								VerticalContentAlignment="center" />
+							<TextBlock
+								TextWrapping="WrapWithOverflow"
+								Grid.Column="0"
+								Grid.Row="3"
+								Text="{Binding Path=Equipdefensenotes}" />
+						</Grid>
+					</StackPanel>
+					<StackPanel>
+						<Label
+							Content="Spells-Scrolls-Powers"
+							FontWeight="Bold"
+							HorizontalContentAlignment="Center" />
+						<Button
+							Content="Add Row"
+							x:Name="button6"
+							Click="AddRow" />
+					</StackPanel>
+					<StackPanel
+						Name="spellpanel"
+						Orientation="Vertical">
+						<StackPanel
+							Orientation="Horizontal">
+							<TextBox
+								Width="125"></TextBox>
+							<CheckBox
+								VerticalAlignment="Center" />
+							<Button
+								Content="+1"
+								x:Name="button5"
+								Click="AddButton" />
+						</StackPanel>
+						<Label
+							Content="General Notes"
+							HorizontalContentAlignment="Center"
+							FontWeight="Bold" />
+						<TextBox
+							TextWrapping="WrapWithOverflow"
+							VerticalScrollBarVisibility="Auto" />
+						<Label
+							Content="Quest"
+							HorizontalContentAlignment="Center"
+							FontWeight="Bold" />
+						<TextBox
+							TextWrapping="WrapWithOverflow"
+							VerticalScrollBarVisibility="Auto" />
+						<Label
+							Content="Clues"
+							HorizontalContentAlignment="Center"
+							FontWeight="Bold" />
+						<StackPanel
+							Orientation="Horizontal">
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<TextBox
+								HorizontalAlignment="Stretch"
+								Width="100"/>
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal">
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<TextBox
+								HorizontalAlignment="Stretch"
+								Width="100"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel
+				Grid.Row="0"
+				HorizontalAlignment="Stretch"
+				Height="NaN"
+				VerticalAlignment="Stretch"
+				Width="NaN"
+				Margin="0,0,0,0"
+				Grid.Column="1" >
+							<Border
+					BorderThickness="1"
+					BorderBrush="Black"
+					Margin="0,0,0,0">
+					<StackPanel
+						Name="stack2"
+						Height="NaN"
+						Width="NaN"
+						Orientation="Horizontal"
+						Margin="0,0,0,0">
+						<Label
+							Content="Name:"
+							Height="NaN"
+							Width="NaN" />
+						<TextBox
+							Width="NaN"
+							Height="NaN"
+							Text="{Binding Name}"
+							VerticalContentAlignment="Center"
+							IsEnabled="True"
+							IsReadOnly="True" />
+						<Label
+							Content="Class:"
+							Height="NaN"
+							Width="NaN" />
+						<TextBox
+							Width="NaN"
+							Height="NaN"
+							Text="{Binding CharType}"
+							VerticalContentAlignment="Center"
+							IsReadOnly="True" />
+					</StackPanel>
+				</Border>
+				<StackPanel
+					Name="mainpanel2">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="0.5*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Border
+							Grid.Column="1"
+							BorderThickness="1"
+							BorderBrush="Black">
+							<StackPanel
+								Name="picpanel2"
+								Grid.Column="1"
+								Width="NaN"
+								Height="NaN"></StackPanel>
+						</Border>
+						<Border
+							BorderThickness="1"
+							BorderBrush="Black">
+							<StackPanel
+								Orientation="Vertical"
+								Grid.Column="0">
+								<StackPanel
+									Orientation="Horizontal">
+									<Label
+										Content="Level:  " />
+									<TextBox
+										Name="levelbox2"
+										Margin="1"
+										VerticalContentAlignment="Center"
+										Text="{Binding Path=Level}" />
+									<Button
+										Margin="1"
+										Content="LevelUp"
+										x:Name="button32"
+										Click="button3_Click" />
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal">
+									<Label
+										Content="Life:" />
+									<TextBlock
+										Name="lifeblock2"
+										Margin="1,1,5,1"
+										VerticalAlignment="Center">
+										<Run
+											Name="currliferun2"
+											Text="{Binding Path=Currentlife}" />
+										<Run
+											Text="/" />
+										<Run
+											Name="liferun2"
+											Text="{Binding Path=Life}" />
+									</TextBlock>
+									<Button
+										Margin="1"
+										Width="15"
+										Content="+"
+										x:Name="button22"
+										Click="button2_Click" />
+									<Button
+										Margin="1"
+										Width="15"
+										Content="-"
+										RenderTransformOrigin="0.5,0.5"
+										x:Name="button12"
+										Click="button1_Click" />
+								</StackPanel>
+							</StackPanel>
+						</Border>
+					</Grid>
+					<Border
+						BorderThickness="1"
+						BorderBrush="Black">
+						<StackPanel
+							Grid.Row="0"
+							Orientation="Horizontal">
+							<Label
+								Content="Gold:  "
+								Margin="1" />
+							<TextBox
+								Name="goldbox2"
+								VerticalContentAlignment="Center"
+								Margin="1"
+								Text="{Binding Path=Gold}" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="+1"
+								x:Name="button42"
+								Click="GoldButtonClick" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="+10"
+								Click="GoldButtonClick" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="-1"
+								Click="GoldButtonClick" />
+							<Button
+								Width="25"
+								Margin="1"
+								Content="-10"
+								Click="GoldButtonClick" />
+						</StackPanel>
+					</Border>
+					<Label
+						Content="Equipment"
+						FontSize="12"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center" />
+					<DataGrid
+						Name="equipmentgrid2"
+						ItemsSource="{Binding Path=Equipmentcarried}"
+						AutoGenerateColumns="false">
+						<DataGrid.Columns>
+							<DataGridTemplateColumn
+								Width="40">
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Image
+											Source="{Binding Path=EImage}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Label
+											Content="{Binding Name}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Label
+											Content="{Binding Weapontype}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<Label
+											Content="{Binding Hand}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+							<DataGridTemplateColumn>
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<CheckBox />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+						</DataGrid.Columns>
+					</DataGrid>
+					<Label
+						Content="Attack Notes"
+						FontSize="12"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center" />
+					<StackPanel
+						Orientation="vertical">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="0.75*" />
+								<ColumnDefinition
+									Width="0.25*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+							</Grid.RowDefinitions>
+							<Label
+								Content="Character Bonus"
+								Grid.Column="0"
+								Grid.Row="0" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="0"
+								Name="attackbonusbox2"
+								Text="{Binding Path=Attackbonus}"
+								VerticalContentAlignment="center" />
+							<Label
+								Grid.Column="0"
+								Grid.Row="1"
+								Content="{Binding Path=Attacknotes}" />
+							<Label
+								Grid.Row="2"
+								Grid.Column="0"
+								Content="Equipment Bonus" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="2"
+								Text="{Binding Path=Equipattackbonus}"
+								VerticalContentAlignment="center" />
+							<Label
+								Grid.Column="0"
+								Grid.Row="3"
+								Content="{Binding Path=Equipattacknotes}" />
+						</Grid>
+					</StackPanel>
+					<Label
+						Content="Defense Notes"
+						FontSize="12"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center" />
+					<StackPanel
+						Orientation="vertical">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="0.75*" />
+								<ColumnDefinition
+									Width="0.25*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+								<RowDefinition
+									Height="0.25*" />
+							</Grid.RowDefinitions>
+							<Label
+								Content="Character Bonus"
+								Grid.Column="0"
+								Grid.Row="0" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="0"
+								Name="defensebonusbox2"
+								Text="{Binding Path=Defensebonus}"
+								VerticalContentAlignment="center" />
+							<Label
+								Grid.Column="0"
+								Grid.Row="1"
+								Content="{Binding Path=Defensenotes}" />
+							<Label
+								Grid.Row="2"
+								Grid.Column="0"
+								Content="Equipment Bonus" />
+							<TextBox
+								Grid.Column="1"
+								Grid.Row="2"
+								Text="{Binding Path=Equipdefensebonus}"
+								VerticalContentAlignment="center" />
+							<TextBlock
+								TextWrapping="WrapWithOverflow"
+								Grid.Column="0"
+								Grid.Row="3"
+								Text="{Binding Path=Equipdefensenotes}" />
+						</Grid>
+					</StackPanel>
+					<StackPanel>
+						<Label
+							Content="Spells-Scrolls-Powers"
+							FontWeight="Bold"
+							HorizontalContentAlignment="Center" />
+						<Button
+							Content="Add Row"
+							x:Name="button62"
+							Click="AddRow" />
+					</StackPanel>
+					<StackPanel
+						Name="spellpanel2"
+						Orientation="Vertical">
+						<StackPanel
+							Orientation="Horizontal">
+							<TextBox
+								Width="125"></TextBox>
+							<CheckBox
+								VerticalAlignment="Center" />
+							<Button
+								Content="+1"
+								x:Name="button52"
+								Click="AddButton" />
+						</StackPanel>
+						<Label
+							Content="General Notes"
+							HorizontalContentAlignment="Center"
+							FontWeight="Bold" />
+						<TextBox
+							TextWrapping="WrapWithOverflow"
+							VerticalScrollBarVisibility="Auto" />
+						<Label
+							Content="Quest"
+							HorizontalContentAlignment="Center"
+							FontWeight="Bold" />
+						<TextBox
+							TextWrapping="WrapWithOverflow"
+							VerticalScrollBarVisibility="Auto" />
+						<Label
+							Content="Clues"
+							HorizontalContentAlignment="Center"
+							FontWeight="Bold" />
+						<StackPanel
+							Orientation="Horizontal">
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<TextBox
+								HorizontalAlignment="Stretch"
+								Width="100"/>
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal">
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<CheckBox
+								VerticalAlignment="Center" />
+							<TextBox
+								HorizontalAlignment="Stretch"
+								Width="100"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel
+				Grid.Row="0"
+				HorizontalAlignment="Stretch"
+				Height="NaN"
+				VerticalAlignment="Stretch"
+				Width="NaN"
+				Margin="0,0,0,0"
+				Grid.Column="2" />
+			<StackPanel
+				Grid.Row="0"
+				HorizontalAlignment="Stretch"
+				Height="NaN"
+				VerticalAlignment="Stretch"
+				Width="NaN"
+				Margin="0,0,0,0"
+				Grid.Column="3" />
+		</Grid>
+	</ScrollViewer>
+</Window>

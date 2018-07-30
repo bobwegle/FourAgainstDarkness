@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="FourAgainstDarkness.Views.PartyWin" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="FourAgainstDarkness.Views"
+	Height="300"
+	Width="600">
+	<Window.Resources>
+		<Image
+			x:Shared="false"
+			x:Key="Warrior"
+			Source="../assets/Warrior.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Barbarian"
+			Source="../assets/Barbarian.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Cleric"
+			Source="../assets/Cleric.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Dwarf"
+			Source="../assets/Dwarf.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Elf"
+			Source="../assets/Elf.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Halfling"
+			Source="../assets/Halfling.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Rogue"
+			Source="../assets/Rogue.bmp" />
+		<Image
+			x:Shared="false"
+			x:Key="Wizard"
+			Source="../assets/Wizard.bmp" />
+	</Window.Resources>
+	<Grid>
+		<StackPanel
+			Orientation="Horizontal"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			Margin="0,0,-2,0">
+			<Button
+				Height="100"
+				Width="100"
+				VerticalContentAlignment="Center"
+				x:Name="Char1"
+				VerticalAlignment="Top"
+				Background="#FFDDDDDD"
+				Click="Char1_Click"
+				Margin="25,25,25,25">
+				<StackPanel
+					Name="Stack1"
+					VerticalAlignment="Stretch"
+					HorizontalAlignment="Stretch"
+					Width="NaN"
+					Height="NaN">
+					<TextBlock
+						Text="Sel Character #1" />
+				</StackPanel>
+			</Button>
+			<Button
+				Height="100"
+				Width="100"
+				VerticalContentAlignment="Center"
+				x:Name="Char2"
+				VerticalAlignment="Top"
+				Background="#FFDDDDDD"
+				Click="Char1_Click"
+				Margin="25,25,25,25">
+				<StackPanel
+					Name="Stack2">
+					<TextBlock
+						Text="Sel Character #2" />
+				</StackPanel>
+			</Button>
+			<Button
+				Height="100"
+				Width="100"
+				VerticalContentAlignment="Center"
+				x:Name="Char3"
+				VerticalAlignment="Top"
+				Background="#FFDDDDDD"
+				Click="Char1_Click"
+				Margin="25,25,25,25">
+				<StackPanel
+					Name="Stack3">
+					<TextBlock
+						Text="Sel Character #3" />
+				</StackPanel>
+			</Button>
+			<Button
+				Height="100"
+				Width="100"
+				VerticalContentAlignment="Center"
+				x:Name="Char4"
+				VerticalAlignment="Top"
+				Background="#FFDDDDDD"
+				Click="Char1_Click"
+				Margin="25,25,25,25">
+				<StackPanel
+					Name="Stack4">
+					<TextBlock
+						Text="Sel Character #4" />
+				</StackPanel>
+			</Button>
+		</StackPanel>
+		<StackPanel
+			Grid.Column="0"
+			Grid.Row="1"
+			Margin="0,0,0,0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			Height="NaN"
+			Width="NaN">
+			<Button
+				Width="75"
+				Height="23"
+				x:Name="FinalizeButton"
+				Content="Finalize Party"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				Margin="0,10,0,0"
+				Click="FinalizeButton_Click" />
+		</StackPanel>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="0.817164179104478*" />
+			<RowDefinition
+				Height="0.182835820895522*" />
+		</Grid.RowDefinitions>
+	</Grid>
+</Window>
