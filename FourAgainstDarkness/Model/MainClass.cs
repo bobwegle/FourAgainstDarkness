@@ -11,6 +11,7 @@ using FourAgainstDarkness.Views;
 using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Windows.Media.Imaging;
+using FourAgainstDarkness;
 
 namespace FourAgainstDarkness.Model
 {
@@ -23,7 +24,7 @@ namespace FourAgainstDarkness.Model
 		static PartyAlt _party;
 		
 		[STAThread]
-		public static void Main()
+		public static void StartupMain()
 		{	
 					
 			Equipment Bandage = new Equipment(5, "Heal", "+1 life, no combat, 1 use" );
@@ -238,7 +239,6 @@ namespace FourAgainstDarkness.Model
 			TwoHandedSword.Name="Two-Handed Sword";
 			TwoHandedSword.EImage = new BitmapImage(new Uri(@"/assets/twohandedsword.bmp", UriKind.Relative));
 			equipmentlist.Add(TwoHandedSword);
-
 			
 			ControlPanel controlpanel = new ControlPanel();
 			controlpanel.ShowDialog();

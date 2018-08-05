@@ -3,6 +3,7 @@ using System.Windows;
 using System.Data;
 using System.Xml;
 using System.Configuration;
+using FourAgainstDarkness.Model;
 
 namespace FourAgainstDarkness
 {
@@ -11,5 +12,9 @@ namespace FourAgainstDarkness
 	/// </summary>
 	public partial class App : Application
 	{
+		void StartUp(object sender, StartupEventArgs e)
+		{
+			MainClass.StartupMain();
+		}
 	}
 }

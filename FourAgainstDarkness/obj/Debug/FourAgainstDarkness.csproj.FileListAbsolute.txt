@@ -50,3 +50,4 @@ C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness
 C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.g.resources
 C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.exe
 C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.pdb
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\App.baml

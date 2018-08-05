@@ -16,13 +16,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using FourAgainstDarkness.Model;
+using MahApps.Metro.Controls;
 
 namespace FourAgainstDarkness.Views
 {
 	/// <summary>
 	/// Interaction logic for CharacterSheet.xaml
 	/// </summary>
-	public partial class CharacterSheet : Window
+	public partial class CharacterSheet : MetroWindow
 	{
 		Character _character1;
 		Character _character2;
@@ -53,19 +54,19 @@ namespace FourAgainstDarkness.Views
 			this.Panel3.DataContext=_char3;
 			this.Panel4.DataContext= _char4;
 							
-			Image img1 = this.Resources[_char1.CharType] as Image;
+			Image img1 = FindResource(_char1.CharType) as Image;
 			img1.Height=100;
 			img1.Width=100;
 			
-			Image img2 = this.Resources[_char2.CharType] as Image;
+			Image img2 = FindResource(_char2.CharType) as Image;
 			img2.Height=100;
 			img2.Width=100;
 			
-			Image img3 = this.Resources[_char3.CharType] as Image;
+			Image img3 = FindResource(_char3.CharType) as Image;
 			img3.Height=100;
 			img3.Width=100;
 			
-			Image img4 = this.Resources[_char4.CharType] as Image;
+			Image img4 = FindResource(_char4.CharType) as Image;
 			img4.Height=100;
 			img4.Width=100;
 			
