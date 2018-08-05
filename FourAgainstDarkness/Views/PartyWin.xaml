@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Window
+<Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.PartyWin" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="FourAgainstDarkness.Views"
 	Height="300"
-	Width="600">
+	Width="600" xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	BorderThickness="0"
+	GlowBrush="Black"
+	ResizeMode="CanResizeWithGrip"
+	WindowTransitionsEnabled="False"
+	WindowStartupLocation="CenterScreen">
 	<Window.Resources>
 		<Image
 			x:Shared="false"
@@ -120,14 +125,15 @@
 			Height="NaN"
 			Width="NaN">
 			<Button
-				Width="75"
-				Height="23"
+				Style="{StaticResource AccentedSquareButtonStyle}"
 				x:Name="FinalizeButton"
 				Content="Finalize Party"
 				VerticalAlignment="Center"
 				HorizontalAlignment="Center"
 				Margin="0,10,0,0"
-				Click="FinalizeButton_Click" />
+				Click="FinalizeButton_Click"
+				Width="90"
+				Height="25" />
 		</StackPanel>
 		<Grid.RowDefinitions>
 			<RowDefinition
@@ -136,4 +142,4 @@
 				Height="0.182835820895522*" />
 		</Grid.RowDefinitions>
 	</Grid>
-</Window>
+</Controls:MetroWindow>

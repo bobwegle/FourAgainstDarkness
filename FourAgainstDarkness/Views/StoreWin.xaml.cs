@@ -16,13 +16,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using FourAgainstDarkness.Model;
+using MahApps.Metro.Controls;
 
 namespace FourAgainstDarkness.Views
 {
 	/// <summary>
 	/// Interaction logic for StoreWin.xaml
 	/// </summary>
-	public partial class StoreWin : Window
+	public partial class StoreWin : MetroWindow
 	{
 		private NewCharacter _newchar;
 		public StoreWin(NewCharacter newchar)

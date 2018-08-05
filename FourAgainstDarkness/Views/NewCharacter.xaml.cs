@@ -17,13 +17,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using FourAgainstDarkness.Model;
+using MahApps.Metro.Controls;
 
 namespace FourAgainstDarkness.Views
 {
 	/// <summary>
 	/// Interaction logic for NewCharacter.xaml
 	/// </summary>
-	public partial class NewCharacter : Window
+	public partial class NewCharacter : MetroWindow
 	{
 		private PartyWin _partywin;
 		private Button _charpos;

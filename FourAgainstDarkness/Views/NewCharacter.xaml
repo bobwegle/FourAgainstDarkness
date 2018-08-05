@@ -1,9 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Window
+<?xml version="1.0" encoding="utf-8"?>
+<Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.NewCharacter" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="FourAgainstDarkness.Views"
 	Width="300"
-	Height="NaN">
+	Height="NaN"
+	xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	BorderThickness="0"
+	GlowBrush="Black"
+	ResizeMode="CanResizeWithGrip"
+	WindowTransitionsEnabled="False"
+	WindowStartupLocation="CenterScreen">
 	<Grid>
 		<StackPanel
 			Orientation="Vertical"
@@ -70,19 +76,25 @@
 				Orientation="Vertical">
 				<Label
 					Content="Equipment:" />
-				<ListBox
-					x:Name="EquipmentInventory"
-					ItemsSource="{Binding Equipmentcarried, Mode=TwoWay}">
-					<ListBox.ItemTemplate>
-						<DataTemplate>
-							<TextBlock
-								Text="{Binding Path=Name}" />
-						</DataTemplate>
-					</ListBox.ItemTemplate>
-				</ListBox>
+				<Border BorderBrush="Black" BorderThickness="2">
+					<ListBox
+						x:Name="EquipmentInventory"
+						ItemsSource="{Binding Equipmentcarried, Mode=TwoWay}">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock>
+									<Run Text="{Binding Path=Name}" />
+									<Run Text=", Value="/>
+									<Run Text="{Binding Path=Value}"/>
+								</TextBlock>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</Border>
 				<StackPanel
 					Orientation="Horizontal">
 					<Button
+						Style="{StaticResource AccentedSquareButtonStyle}"
 						Content="Sell"
 						Margin="10,10,10,10"
 						Width="35"
@@ -90,6 +102,7 @@
 						RenderTransformOrigin="0.5,0.5"
 						Click="SellButton_Click" />
 					<Button
+						Style="{StaticResource AccentedSquareButtonStyle}"
 						Content="Buy"
 						Margin="10,10,10,10"
 						Width="35"
@@ -109,6 +122,7 @@
 					3. Reset Gold to original amount.
 			</TextBlock>
 			<Button
+				Style="{StaticResource AccentedSquareButtonStyle}"
 				Name="CompleteButton"
 				Content="Add Character to Party"
 				HorizontalAlignment="Center"
@@ -116,4 +130,4 @@
 				Click="CompleteButton_Click" />
 		</StackPanel>
 	</Grid>
-</Window>
+</Controls:MetroWindow>

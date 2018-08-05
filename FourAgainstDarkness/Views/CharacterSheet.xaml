@@ -1,13 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.CharacterSheet" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="FourAgainstDarkness.Views" xmlns:local="clr-namespace:FourAgainstDarkness"
 	Width="850"
 	Height="616"
-	xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
+	xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	BorderThickness="0"
+	GlowBrush="Black"
+	ResizeMode="CanResizeWithGrip"
+	WindowTransitionsEnabled="False"
+	WindowStartupLocation="CenterScreen">
 	<Window.Resources>
 
 	</Window.Resources>
+	<Controls:MetroWindow.Flyouts>
+   	 	<Controls:FlyoutsControl>
+        	<Controls:Flyout Header="Flyout" Position="Right" Width="200">
+   				 <!-- Your custom content here -->
+			</Controls:Flyout>
+    	</Controls:FlyoutsControl>
+	</Controls:MetroWindow.Flyouts>
 	<ScrollViewer>
 		<Grid>
 			<Grid.ColumnDefinitions>

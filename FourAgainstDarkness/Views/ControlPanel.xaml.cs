@@ -16,13 +16,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using FourAgainstDarkness.Model;
+using MahApps.Metro.Controls;
 
 namespace FourAgainstDarkness.Views
 {
 	/// <summary>
 	/// Interaction logic for ControlPanel.xaml
 	/// </summary>
-	public partial class ControlPanel : Window
+	public partial class ControlPanel : MetroWindow
 	{
 		public ControlPanel()
 		{
@@ -38,5 +39,6 @@ namespace FourAgainstDarkness.Views
 			CharacterSheet  _charactersheet = new CharacterSheet();
 			_charactersheet.ShowDialog();
 		}
+
 	}
 }

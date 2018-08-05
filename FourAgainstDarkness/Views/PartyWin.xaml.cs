@@ -17,13 +17,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using FourAgainstDarkness.Model;
+using MahApps.Metro.Controls;
 
 namespace FourAgainstDarkness.Views
 {
 	/// <summary>
 	/// Interaction logic for PartyWin.xaml
 	/// </summary>
-	public partial class PartyWin : Window
+	public partial class PartyWin : MetroWindow
 	{
 		private PartyAlt _party;
 			
