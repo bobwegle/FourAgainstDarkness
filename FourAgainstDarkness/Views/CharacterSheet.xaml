@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.CharacterSheet" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="FourAgainstDarkness.Views" xmlns:local="clr-namespace:FourAgainstDarkness"
@@ -157,16 +157,24 @@
 									<Controls:ToggleSwitchButton
 										IsManipulationEnabled="False"
 										Width="50"
-										Height="25" />
+										Height="25"
+										Name="switch1_1"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
 										Width="50"
-										Height="25" />
+										Height="25"
+										Name="switch1_2"
+										Click="Pos_switch"/>
 									<Controls:ToggleSwitchButton
 										Width="50"
-										Height="25" />
+										Height="25"
+										Name="switch1_3"
+										Click="Pos_switch"/>
 									<Controls:ToggleSwitchButton
 										Width="50"
-										Height="25" />
+										Height="25"
+										Name="switch1_4" 
+										Click="Pos_switch"/>
 								</WrapPanel>
 							</StackPanel>
 						</Border>
@@ -562,6 +570,31 @@
 										x:Name="button12"
 										Click="button12_Click" />
 								</StackPanel>
+								<Label
+									Content="Position:" />
+								<WrapPanel>
+									<Controls:ToggleSwitchButton
+										IsManipulationEnabled="False"
+										Width="50"
+										Height="25" 
+										Name="switch2_1" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25"
+										Name="switch2_2" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch2_3" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch2_4" 
+										Click="Pos_switch"/>
+								</WrapPanel>
 							</StackPanel>
 						</Border>
 					</Grid>
@@ -956,6 +989,31 @@
 										x:Name="button13"
 										Click="button13_Click" />
 								</StackPanel>
+								<Label
+									Content="Position:" />
+								<WrapPanel>
+									<Controls:ToggleSwitchButton
+										IsManipulationEnabled="False"
+										Width="50"
+										Height="25" 
+										Name="switch3_1" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch3_2" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch3_3" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch3_4" 
+										Click="Pos_switch"/>
+								</WrapPanel>
 							</StackPanel>
 						</Border>
 					</Grid>
@@ -1349,6 +1407,31 @@
 										x:Name="button14"
 										Click="button14_Click" />
 								</StackPanel>
+								<Label
+									Content="Position:" />
+								<WrapPanel>
+									<Controls:ToggleSwitchButton
+										IsManipulationEnabled="False"
+										Width="50"
+										Height="25" 
+										Name="switch4_1" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch4_2" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch4_3" 
+										Click="Pos_switch"/>
+									<Controls:ToggleSwitchButton
+										Width="50"
+										Height="25" 
+										Name="switch4_4" 
+										Click="Pos_switch"/>
+								</WrapPanel>
 							</StackPanel>
 						</Border>
 					</Grid>

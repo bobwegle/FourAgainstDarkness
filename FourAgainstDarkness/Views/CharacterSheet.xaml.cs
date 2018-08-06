@@ -382,5 +382,41 @@ namespace FourAgainstDarkness.Views
 			btn.Content="+1";
 			btn.Click+=AddButton;		
 		}
+		void Pos_switch(object sender, RoutedEventArgs e)
+		{
+				int charno;
+				int placeno;
+				string name;
+				ToggleSwitchButton sw = new ToggleSwitchButton();
+				sw = (ToggleSwitchButton)sender;
+				name = sw.Name;
+				charno = Convert.ToInt16(name.Substring(6,1));
+				placeno = Convert.ToInt16(name.Substring(8,1));
+				
+				for(int i=1; i<5; i++)
+				{
+					if(i!=charno)
+					{
+						string swname;
+						swname="switch" + i.ToString() +"_" + placeno.ToString();
+						ToggleSwitchButton sw1=(ToggleSwitchButton)LogicalTreeHelper.FindLogicalNode(this,swname);
+						sw1.IsChecked=false;
+					}
+				}
+				
+				for(int j=1; j<5; j++)
+				{
+					if(j!=placeno)
+					{
+						string swname;
+						swname="switch" + charno.ToString() +"_" + j.ToString();
+						ToggleSwitchButton sw1=(ToggleSwitchButton)LogicalTreeHelper.FindLogicalNode(this,swname);
+						sw1.IsChecked=false;
+
+					}
+				}
+				
+				
+		}
 	}
 }
