@@ -112,6 +112,7 @@
 										VerticalContentAlignment="Center"
 										Text="{Binding Path=Level}" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Content="LevelUp"
 										x:Name="button3"
@@ -135,12 +136,14 @@
 											Text="{Binding Path=Life}" />
 									</TextBlock>
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
-										Width="15"
+										Width="20"
 										Content="+"
 										x:Name="button2"
 										Click="button2_Click" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Width="15"
 										Content="-"
@@ -166,23 +169,27 @@
 								Margin="1"
 								Text="{Binding Path=Gold}" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="+1"
 								x:Name="button4"
 								Click="GoldButtonClick" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="+10"
 								Click="GoldButtonClick" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="-1"
 								Click="GoldButtonClick" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="-10"
 								Click="GoldButtonClick" />
@@ -353,6 +360,7 @@
 							FontWeight="Bold"
 							HorizontalContentAlignment="Center" />
 						<Button
+							Style="{StaticResource AccentedSquareButtonStyle}"
 							Content="Add Row"
 							x:Name="button6"
 							Click="AddRow" />
@@ -367,6 +375,7 @@
 							<CheckBox
 								VerticalAlignment="Center" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Content="+1"
 								x:Name="button5"
 								Click="AddButton" />
@@ -496,6 +505,7 @@
 										VerticalContentAlignment="Center"
 										Text="{Binding Path=Level}" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Content="LevelUp"
 										x:Name="button32"
@@ -520,12 +530,14 @@
 											Text="{Binding Path=Life}" />
 									</TextBlock>
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
-										Width="15"
+										Width="20"
 										Content="+"
 										x:Name="button22"
 										Click="button22_Click" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Width="15"
 										Content="-"
@@ -551,23 +563,27 @@
 								Margin="1"
 								Text="{Binding Path=Gold}" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="+1"
 								x:Name="button42"
 								Click="GoldButton2Click" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="+10"
 								Click="GoldButton2Click" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="-1"
 								Click="GoldButton2Click" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="-10"
 								Click="GoldButton2Click" />
@@ -738,6 +754,7 @@
 							FontWeight="Bold"
 							HorizontalContentAlignment="Center" />
 						<Button
+							Style="{StaticResource AccentedSquareButtonStyle}"
 							Content="Add Row"
 							x:Name="button62"
 							Click="AddRow2" />
@@ -752,6 +769,7 @@
 							<CheckBox
 								VerticalAlignment="Center" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Content="+1"
 								x:Name="button52"
 								Click="AddButton" />
@@ -880,6 +898,7 @@
 										VerticalContentAlignment="Center"
 										Text="{Binding Path=Level}" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Content="LevelUp"
 										x:Name="button33"
@@ -904,12 +923,14 @@
 											Text="{Binding Path=Life}" />
 									</TextBlock>
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
-										Width="15"
+										Width="20"
 										Content="+"
 										x:Name="button23"
 										Click="button23_Click" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Width="15"
 										Content="-"
@@ -935,23 +956,27 @@
 								Margin="1"
 								Text="{Binding Path=Gold}" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="+1"
 								x:Name="button43"
 								Click="GoldButton3Click" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="+10"
 								Click="GoldButton3Click" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="-1"
 								Click="GoldButton3Click" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="-10"
 								Click="GoldButton3Click" />
@@ -1122,6 +1147,7 @@
 							FontWeight="Bold"
 							HorizontalContentAlignment="Center" />
 						<Button
+							Style="{StaticResource AccentedSquareButtonStyle}"
 							Content="Add Row"
 							x:Name="button63"
 							Click="AddRow3" />
@@ -1136,6 +1162,7 @@
 							<CheckBox
 								VerticalAlignment="Center" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Content="+1"
 								x:Name="button53"
 								Click="AddButton" />
@@ -1264,6 +1291,7 @@
 										VerticalContentAlignment="Center"
 										Text="{Binding Path=Level}" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Content="LevelUp"
 										x:Name="button34"
@@ -1288,12 +1316,14 @@
 											Text="{Binding Path=Life}" />
 									</TextBlock>
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
-										Width="15"
+										Width="20"
 										Content="+"
 										x:Name="button24"
 										Click="button24_Click" />
 									<Button
+										Style="{StaticResource AccentedSquareButtonStyle}"
 										Margin="1"
 										Width="15"
 										Content="-"
@@ -1319,23 +1349,27 @@
 								Margin="1"
 								Text="{Binding Path=Gold}" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="+1"
 								x:Name="button44"
 								Click="GoldButton4Click" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="+10"
 								Click="GoldButton4Click" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Width="25"
 								Margin="1"
 								Content="-1"
 								Click="GoldButton4Click" />
 							<Button
-								Width="25"
+								Style="{StaticResource AccentedSquareButtonStyle}"
+								Width="30"
 								Margin="1"
 								Content="-10"
 								Click="GoldButton4Click" />
@@ -1506,6 +1540,7 @@
 							FontWeight="Bold"
 							HorizontalContentAlignment="Center" />
 						<Button
+							Style="{StaticResource AccentedSquareButtonStyle}"
 							Content="Add Row"
 							x:Name="button64"
 							Click="AddRow4" />
@@ -1520,6 +1555,7 @@
 							<CheckBox
 								VerticalAlignment="Center" />
 							<Button
+								Style="{StaticResource AccentedSquareButtonStyle}"
 								Content="+1"
 								x:Name="button54"
 								Click="AddButton" />
