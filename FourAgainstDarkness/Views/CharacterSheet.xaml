@@ -9,7 +9,12 @@
 	ResizeMode="CanResizeWithGrip"
 	WindowTransitionsEnabled="False"
 	WindowStartupLocation="CenterScreen">
-	<Window.Resources></Window.Resources>
+	<Window.Resources>
+		<Style TargetType="Controls:ToggleSwitchButton">
+			<Setter Property="Width" Value="60"/>
+			<Setter Property="Height" Value="30"/>
+		</Style>
+	</Window.Resources>
 	<Controls:MetroWindow.Flyouts>
 		<Controls:FlyoutsControl>
 			<Controls:Flyout
@@ -156,25 +161,25 @@
 								<WrapPanel>
 									<Controls:ToggleSwitchButton
 										IsManipulationEnabled="False"
-										Width="50"
-										Height="25"
 										Name="switch1_1"
-										Click="Pos_switch" />
+										Click="Pos_switch"
+										
+										 />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25"
 										Name="switch1_2"
-										Click="Pos_switch"/>
+										Click="Pos_switch"
+										
+										 />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25"
 										Name="switch1_3"
-										Click="Pos_switch"/>
+										Click="Pos_switch"
+										
+										 />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25"
-										Name="switch1_4" 
-										Click="Pos_switch"/>
+										Name="switch1_4"
+										Click="Pos_switch"
+										
+										 />
 								</WrapPanel>
 							</StackPanel>
 						</Border>
@@ -225,160 +230,176 @@
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
-					<DataGrid
-						Name="equipmentgrid"
-						ItemsSource="{Binding Path=Equipmentcarried}"
-						AutoGenerateColumns="false">
-						<DataGrid.Columns>
-							<DataGridTemplateColumn
-								Width="40">
-								<DataGridTemplateColumn.CellTemplate>
-									<DataTemplate>
-										<Image
-											Source="{Binding Path=EImage}" />
-									</DataTemplate>
-								</DataGridTemplateColumn.CellTemplate>
-							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
-								<DataGridTemplateColumn.CellTemplate>
-									<DataTemplate>
-										<Label
-											Content="{Binding Name}" />
-									</DataTemplate>
-								</DataGridTemplateColumn.CellTemplate>
-							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
-								<DataGridTemplateColumn.CellTemplate>
-									<DataTemplate>
-										<Label
-											Content="{Binding Weapontype}" />
-									</DataTemplate>
-								</DataGridTemplateColumn.CellTemplate>
-							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
-								<DataGridTemplateColumn.CellTemplate>
-									<DataTemplate>
-										<Label
-											Content="{Binding Hand}" />
-									</DataTemplate>
-								</DataGridTemplateColumn.CellTemplate>
-							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
-								<DataGridTemplateColumn.CellTemplate>
-									<DataTemplate>
-										<CheckBox />
-									</DataTemplate>
-								</DataGridTemplateColumn.CellTemplate>
-							</DataGridTemplateColumn>
-						</DataGrid.Columns>
-					</DataGrid>
+					<Border
+						BorderBrush="Black"
+						BorderThickness="1">
+						<DataGrid
+							Name="equipmentgrid"
+							ItemsSource="{Binding Path=Equipmentcarried}"
+							AutoGenerateColumns="false">
+							<DataGrid.Columns>
+								<DataGridTemplateColumn
+									Width="40">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<Image
+												Source="{Binding Path=EImage}" />
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+								<DataGridTemplateColumn
+									Header="Name">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<Label
+												Content="{Binding Name}" />
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+								<DataGridTemplateColumn
+									Header="Type">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<Label
+												Content="{Binding Weapontype}" />
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+								<DataGridTemplateColumn
+									Header="#Hands">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<Label
+												Content="{Binding Hand}" />
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+								<DataGridTemplateColumn
+									Header="Held">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<CheckBox />
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+							</DataGrid.Columns>
+						</DataGrid>
+					</Border>
 					<Label
 						Content="Attack Notes"
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
-					<StackPanel
-						Orientation="vertical">
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition
-									Width="0.75*" />
-								<ColumnDefinition
-									Width="0.25*" />
-							</Grid.ColumnDefinitions>
-							<Grid.RowDefinitions>
-								<RowDefinition
-									Height="0.25*" />
-								<RowDefinition
-									Height="0.25*" />
-								<RowDefinition
-									Height="0.25*" />
-								<RowDefinition
-									Height="0.25*" />
-							</Grid.RowDefinitions>
-							<Label
-								Content="Character Bonus"
-								Grid.Column="0"
-								Grid.Row="0" />
-							<TextBox
-								Grid.Column="1"
-								Grid.Row="0"
-								Name="attackbonusbox"
-								Text="{Binding Path=Attackbonus}"
-								VerticalContentAlignment="center" />
-							<Label
-								Grid.Column="0"
-								Grid.Row="1"
-								Content="{Binding Path=Attacknotes}" />
-							<Label
-								Grid.Row="2"
-								Grid.Column="0"
-								Content="Equipment Bonus" />
-							<TextBox
-								Grid.Column="1"
-								Grid.Row="2"
-								Text="{Binding Path=Equipattackbonus}"
-								VerticalContentAlignment="center" />
-							<Label
-								Grid.Column="0"
-								Grid.Row="3"
-								Content="{Binding Path=Equipattacknotes}" />
-						</Grid>
-					</StackPanel>
+					<Border
+						BorderBrush="Black"
+						BorderThickness="1">
+						<StackPanel
+							Orientation="vertical">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="0.75*" />
+									<ColumnDefinition
+										Width="0.25*" />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition
+										Height="0.25*" />
+									<RowDefinition
+										Height="0.25*" />
+									<RowDefinition
+										Height="0.25*" />
+									<RowDefinition
+										Height="0.25*" />
+								</Grid.RowDefinitions>
+								<Label
+									Content="Character Bonus"
+									Grid.Column="0"
+									Grid.Row="0" />
+								<TextBox
+									Grid.Column="1"
+									Grid.Row="0"
+									Name="attackbonusbox"
+									Text="{Binding Path=Attackbonus}"
+									VerticalContentAlignment="center" />
+								<Label
+									Grid.Column="0"
+									Grid.Row="1"
+									Content="{Binding Path=Attacknotes}" />
+								<Label
+									Grid.Row="2"
+									Grid.Column="0"
+									Content="Equipment Bonus" />
+								<TextBox
+									Grid.Column="1"
+									Grid.Row="2"
+									Text="{Binding Path=Equipattackbonus}"
+									VerticalContentAlignment="center" />
+								<Label
+									Grid.Column="0"
+									Grid.Row="3"
+									Content="{Binding Path=Equipattacknotes}" />
+							</Grid>
+						</StackPanel>
+					</Border>
 					<Label
 						Content="Defense Notes"
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
-					<StackPanel
-						Orientation="vertical">
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition
-									Width="0.75*" />
-								<ColumnDefinition
-									Width="0.25*" />
-							</Grid.ColumnDefinitions>
-							<Grid.RowDefinitions>
-								<RowDefinition
-									Height="0.25*" />
-								<RowDefinition
-									Height="0.25*" />
-								<RowDefinition
-									Height="0.25*" />
-								<RowDefinition
-									Height="0.25*" />
-							</Grid.RowDefinitions>
-							<Label
-								Content="Character Bonus"
-								Grid.Column="0"
-								Grid.Row="0" />
-							<TextBox
-								Grid.Column="1"
-								Grid.Row="0"
-								Name="defensebonusbox"
-								Text="{Binding Path=Defensebonus}"
-								VerticalContentAlignment="center" />
-							<Label
-								Grid.Column="0"
-								Grid.Row="1"
-								Content="{Binding Path=Defensenotes}" />
-							<Label
-								Grid.Row="2"
-								Grid.Column="0"
-								Content="Equipment Bonus" />
-							<TextBox
-								Grid.Column="1"
-								Grid.Row="2"
-								Text="{Binding Path=Equipdefensebonus}"
-								VerticalContentAlignment="center" />
-							<TextBlock
-								TextWrapping="WrapWithOverflow"
-								Grid.Column="0"
-								Grid.Row="3"
-								Text="{Binding Path=Equipdefensenotes}" />
-						</Grid>
-					</StackPanel>
+					<Border
+						BorderBrush="Black"
+						BorderThickness="1">
+						<StackPanel
+							Orientation="vertical">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="0.75*" />
+									<ColumnDefinition
+										Width="0.25*" />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition
+										Height="0.25*" />
+									<RowDefinition
+										Height="0.25*" />
+									<RowDefinition
+										Height="0.25*" />
+									<RowDefinition
+										Height="0.25*" />
+								</Grid.RowDefinitions>
+								<Label
+									Content="Character Bonus"
+									Grid.Column="0"
+									Grid.Row="0" />
+								<TextBox
+									Grid.Column="1"
+									Grid.Row="0"
+									Name="defensebonusbox"
+									Text="{Binding Path=Defensebonus}"
+									VerticalContentAlignment="center" />
+								<Label
+									Grid.Column="0"
+									Grid.Row="1"
+									Content="{Binding Path=Defensenotes}" />
+								<Label
+									Grid.Row="2"
+									Grid.Column="0"
+									Content="Equipment Bonus" />
+								<TextBox
+									Grid.Column="1"
+									Grid.Row="2"
+									Text="{Binding Path=Equipdefensebonus}"
+									VerticalContentAlignment="center" />
+								<TextBlock
+									TextWrapping="WrapWithOverflow"
+									Grid.Column="0"
+									Grid.Row="3"
+									Text="{Binding Path=Equipdefensenotes}" />
+							</Grid>
+						</StackPanel>
+					</Border>
 					<StackPanel>
 						<Label
 							Content="Spells-Scrolls-Powers"
@@ -575,25 +596,25 @@
 								<WrapPanel>
 									<Controls:ToggleSwitchButton
 										IsManipulationEnabled="False"
-										Width="50"
-										Height="25" 
-										Name="switch2_1" 
-										Click="Pos_switch"/>
+
+
+										Name="switch2_1"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25"
-										Name="switch2_2" 
-										Click="Pos_switch"/>
+
+
+										Name="switch2_2"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch2_3" 
-										Click="Pos_switch"/>
+
+
+										Name="switch2_3"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch2_4" 
-										Click="Pos_switch"/>
+
+
+										Name="switch2_4"
+										Click="Pos_switch" />
 								</WrapPanel>
 							</StackPanel>
 						</Border>
@@ -994,25 +1015,25 @@
 								<WrapPanel>
 									<Controls:ToggleSwitchButton
 										IsManipulationEnabled="False"
-										Width="50"
-										Height="25" 
-										Name="switch3_1" 
-										Click="Pos_switch"/>
+
+
+										Name="switch3_1"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch3_2" 
-										Click="Pos_switch"/>
+
+
+										Name="switch3_2"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch3_3" 
-										Click="Pos_switch"/>
+
+
+										Name="switch3_3"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch3_4" 
-										Click="Pos_switch"/>
+
+
+										Name="switch3_4"
+										Click="Pos_switch" />
 								</WrapPanel>
 							</StackPanel>
 						</Border>
@@ -1412,25 +1433,25 @@
 								<WrapPanel>
 									<Controls:ToggleSwitchButton
 										IsManipulationEnabled="False"
-										Width="50"
-										Height="25" 
-										Name="switch4_1" 
-										Click="Pos_switch"/>
+
+
+										Name="switch4_1"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch4_2" 
-										Click="Pos_switch"/>
+
+
+										Name="switch4_2"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch4_3" 
-										Click="Pos_switch"/>
+
+
+										Name="switch4_3"
+										Click="Pos_switch" />
 									<Controls:ToggleSwitchButton
-										Width="50"
-										Height="25" 
-										Name="switch4_4" 
-										Click="Pos_switch"/>
+
+
+										Name="switch4_4"
+										Click="Pos_switch" />
 								</WrapPanel>
 							</StackPanel>
 						</Border>
