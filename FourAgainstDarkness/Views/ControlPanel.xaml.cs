@@ -39,6 +39,11 @@ namespace FourAgainstDarkness.Views
 			CharacterSheet  _charactersheet = new CharacterSheet();
 			_charactersheet.ShowDialog();
 		}
+		void OpenMonsterSheet(object sender, RoutedEventArgs e)
+		{
+			Monster _monstersheet = new Monster();
+			_monstersheet.Show();
+		}
 
 	}
 }

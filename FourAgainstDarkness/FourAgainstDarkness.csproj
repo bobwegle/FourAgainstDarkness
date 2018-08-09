@@ -104,6 +104,10 @@
       <DependentUpon>ControlPanel.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\Monster.xaml.cs">
+      <DependentUpon>Monster.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Views\NewCharacter.xaml.cs">
       <DependentUpon>NewCharacter.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -160,6 +164,7 @@
   <ItemGroup>
     <Page Include="Views\CharacterSheet.xaml" />
     <Page Include="Views\ControlPanel.xaml" />
+    <Page Include="Views\Monster.xaml" />
     <Page Include="Views\NewCharacter.xaml" />
     <Page Include="Views\PartyWin.xaml" />
     <Page Include="Views\StoreWin.xaml" />

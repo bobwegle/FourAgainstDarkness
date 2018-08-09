@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.CharacterSheet" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="FourAgainstDarkness.Views" xmlns:local="clr-namespace:FourAgainstDarkness"
@@ -672,7 +672,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Name">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -680,7 +680,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Type">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -688,7 +688,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="#Hands">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -696,7 +696,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Held">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<CheckBox />
@@ -710,6 +710,7 @@
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
+					<Border BorderBrush="Black" BorderThickness="1">
 					<StackPanel
 						Orientation="vertical">
 						<Grid>
@@ -758,11 +759,13 @@
 								Content="{Binding Path=Equipattacknotes}" />
 						</Grid>
 					</StackPanel>
+					</Border>
 					<Label
 						Content="Defense Notes"
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
+					<Border BorderBrush="Black" BorderThickness="1">
 					<StackPanel
 						Orientation="vertical">
 						<Grid>
@@ -813,6 +816,7 @@
 								Text="{Binding Path=Equipdefensenotes}" />
 						</Grid>
 					</StackPanel>
+					</Border>
 					<StackPanel>
 						<Label
 							Content="Spells-Scrolls-Powers"
@@ -1085,7 +1089,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Name">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -1093,7 +1097,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn  Header="Type">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -1101,7 +1105,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="#Hands">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -1109,7 +1113,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Held">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<CheckBox />
@@ -1123,6 +1127,7 @@
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
+					<Border BorderBrush="Black" BorderThickness="1">
 					<StackPanel
 						Orientation="vertical">
 						<Grid>
@@ -1171,11 +1176,13 @@
 								Content="{Binding Path=Equipattacknotes}" />
 						</Grid>
 					</StackPanel>
+					</Border>
 					<Label
 						Content="Defense Notes"
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
+					<Border BorderBrush="Black" BorderThickness="1">
 					<StackPanel
 						Orientation="vertical">
 						<Grid>
@@ -1225,6 +1232,7 @@
 								Text="{Binding Path=Equipdefensenotes}" />
 						</Grid>
 					</StackPanel>
+					</Border>
 					<StackPanel>
 						<Label
 							Content="Spells-Scrolls-Powers"
@@ -1497,7 +1505,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Name">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -1505,7 +1513,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Type">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -1513,7 +1521,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="#Hands">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<Label
@@ -1521,7 +1529,7 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTemplateColumn>
+							<DataGridTemplateColumn Header="Held">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
 										<CheckBox />
@@ -1535,6 +1543,7 @@
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
+					<Border BorderBrush="Black" BorderThickness="1">
 					<StackPanel
 						Orientation="vertical">
 						<Grid>
@@ -1583,11 +1592,13 @@
 								Content="{Binding Path=Equipattacknotes}" />
 						</Grid>
 					</StackPanel>
+					</Border>
 					<Label
 						Content="Defense Notes"
 						FontSize="12"
 						FontWeight="Bold"
 						HorizontalContentAlignment="Center" />
+					<Border BorderBrush="Black" BorderThickness="1">
 					<StackPanel
 						Orientation="vertical">
 						<Grid>
@@ -1637,6 +1648,7 @@
 								Text="{Binding Path=Equipdefensenotes}" />
 						</Grid>
 					</StackPanel>
+					</Border>
 					<StackPanel>
 						<Label
 							Content="Spells-Scrolls-Powers"

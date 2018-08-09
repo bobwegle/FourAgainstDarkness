@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.ControlPanel" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="FourAgainstDarkness.Views"
@@ -29,8 +29,7 @@
 				Content="Create Party"
 				x:Name="CreatePartyButton"
 				Click="CreatePartyButton_Click"
-				Width="85"
-				/>
+				Width="85" />
 			<Button
 				Style="{StaticResource AccentedSquareButtonStyle}"
 				Name="CharSheetButton"
@@ -38,6 +37,13 @@
 				Margin="0,10,0,0"
 				HorizontalAlignment="Center"
 				Click="CharSheetButton_Click" />
+			<Button
+				Style="{StaticResource AccentedSquareButtonStyle}"
+				Margin="0,10,0,0"
+				HorizontalAlignment="Center" xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+				x:Name="CharSheetButton_Copy"
+				Content="Open Monster Sheet"
+				Click="OpenMonsterSheet" />
 		</StackPanel>
 	</Grid>
 </Controls:MetroWindow>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Controls:MetroWindow
+	x:Class="FourAgainstDarkness.Views.Monster" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="FourAgainstDarkness.Views" xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	BorderThickness="0"
+	GlowBrush="Black"
+	ResizeMode="CanResizeWithGrip"
+	WindowTransitionsEnabled="False"
+	WindowStartupLocation="CenterScreen"
+	Width="627"
+	Height="343">
+	<Controls:MetroWindow.Resources>
+		<Border
+			x:Key="encounter"
+			x:Shared="false">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<StackPanel
+					Grid.Column="0"
+					Orientation="Vertical">
+					<StackPanel
+						Orientation="Horizontal">
+						<Border
+							BorderBrush="Black"
+							BorderThickness="1"
+							CornerRadius="2">
+							<StackPanel
+								Orientation="Vertical">
+								<Label
+									Content="Minion" />
+								<TextBox />
+							</StackPanel>
+						</Border>
+						<StackPanel
+							Orientation="Vertical">
+							<RadioButton
+								Content="BOSS" />
+							<RadioButton
+								Content="VERMIN" />
+						</StackPanel>
+						<Border
+							BorderBrush="Black"
+							BorderThickness="1"
+							CornerRadius="2">
+							<StackPanel
+								Orientation="Vertical">
+								<Label
+									Content="Level" />
+								<TextBox />
+							</StackPanel>
+						</Border>
+						<Border
+							BorderBrush="Black"
+							BorderThickness="1"
+							CornerRadius="2">
+							<StackPanel
+								Orientation="Vertical">
+								<Label
+									Content="Count" />
+								<TextBox />
+							</StackPanel>
+						</Border>
+					</StackPanel>
+					<Border
+						BorderBrush="Black"
+						BorderThickness="2">
+						<WrapPanel>
+							<CheckBox />
+							<CheckBox />
+							<Button
+								Content="+1"
+								Style="{StaticResource AccentedSquareButtonStyle}" />
+						</WrapPanel>
+					</Border>
+				</StackPanel>
+				<Border
+					BorderBrush="Black"
+					BorderThickness="2"
+					Grid.Column="1">
+					<StackPanel
+						Orientation="Vertical">
+						<StackPanel
+							Orientation="Horizontal">
+							<StackPanel
+								Orientation="Vertical">
+								<Label
+									Content="FLEE" />
+								<RadioButton
+									HorizontalAlignment="Center" />
+							</StackPanel>
+							<StackPanel
+								Orientation="Vertical">
+								<Label
+									Content="AMBUSH" />
+								<RadioButton
+									HorizontalAlignment="Center" />
+							</StackPanel>
+							<StackPanel
+								Orientation="Vertical">
+								<Label
+									Content="BRIBE" />
+								<RadioButton
+									HorizontalAlignment="Center" />
+							</StackPanel>
+						</StackPanel>
+						<StackPanel
+							Orientation="Vertical">
+							<Label
+								Content="NOTE" />
+							<TextBox />
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal">
+							<Label
+								Content="ATTACKS PER ROUND: " />
+							<TextBox />
+						</StackPanel>
+					</StackPanel>
+				</Border>
+			</Grid>
+		</Border>
+	</Controls:MetroWindow.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="0.25*" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Button
+			Content="Add Encounter"
+			Style="{StaticResource AccentedSquareButtonStyle}"
+			Height="25"
+			HorizontalAlignment="Left"
+			Margin="5,5,5,5"
+			Click="AddEncounter" />
+		<WrapPanel Name="wrappanel"
+			Grid.Row="1">
+			<ContentPresenter
+				Content="{StaticResource encounter}" />
+		</WrapPanel>
+	</Grid>
+</Controls:MetroWindow>

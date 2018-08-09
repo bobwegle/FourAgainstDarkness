@@ -51,3 +51,5 @@ C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness
 C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.exe
 C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\FourAgainstDarkness.pdb
 C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\App.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\Monster.baml
+C:\Users\rwegl\OneDrive\Documents\GitHub\FourAgainstDarkness\FourAgainstDarkness\obj\Debug\Views\Monster.g.cs
