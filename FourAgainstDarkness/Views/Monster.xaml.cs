@@ -37,5 +37,15 @@ namespace FourAgainstDarkness.Views
 			wrappanel.Children.Add(content);
 			
 		}
+		void AddChk(object sender, RoutedEventArgs e)
+		{
+			CheckBox chk = new CheckBox();
+			chk.VerticalAlignment=VerticalAlignment.Center;
+			WrapPanel stk = new WrapPanel();
+			Button btn = new Button();
+			btn=(Button)sender;
+			stk = (WrapPanel)VisualTreeHelper.GetParent(btn);
+			stk.Children.Insert(stk.Children.Count-1, chk);
+		}
 	}
 }
