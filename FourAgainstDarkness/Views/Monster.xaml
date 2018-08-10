@@ -13,11 +13,14 @@
 		<Border
 			x:Key="encounter"
 			x:Shared="false"
-			Width="380">
+			Width="300"
+			MaxWidth="300">
 			<Grid>
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition />
-					<ColumnDefinition />
+					<ColumnDefinition
+						Width=".62*" />
+					<ColumnDefinition
+						Width=".38*" />
 				</Grid.ColumnDefinitions>
 				<StackPanel
 					Grid.Column="0"
@@ -38,9 +41,15 @@
 						<StackPanel
 							Orientation="Vertical">
 							<RadioButton
-								Content="BOSS" />
+								Content="BOSS"
+								FontSize="8"
+								Margin="0,8,0,0"
+								VerticalAlignment="Stretch"
+								HorizontalAlignment="Left" />
 							<RadioButton
-								Content="VERMIN" />
+								Content="VERMIN"
+								FontSize="8"
+								HorizontalAlignment="Left" />
 						</StackPanel>
 						<Border
 							BorderBrush="Black"
@@ -89,21 +98,24 @@
 							<StackPanel
 								Orientation="Vertical">
 								<Label
-									Content="FLEE" />
+									Content="FLEE"
+									FontSize="8" />
 								<RadioButton
 									HorizontalAlignment="Center" />
 							</StackPanel>
 							<StackPanel
 								Orientation="Vertical">
 								<Label
-									Content="AMBUSH" />
+									Content="AMBUSH"
+									FontSize="8" />
 								<RadioButton
 									HorizontalAlignment="Center" />
 							</StackPanel>
 							<StackPanel
 								Orientation="Vertical">
 								<Label
-									Content="BRIBE" />
+									Content="BRIBE"
+									FontSize="8" />
 								<RadioButton
 									HorizontalAlignment="Center" />
 							</StackPanel>
@@ -111,13 +123,15 @@
 						<StackPanel
 							Orientation="Vertical">
 							<Label
-								Content="NOTE" />
+								Content="NOTE"
+								FontSize="8" />
 							<TextBox />
 						</StackPanel>
 						<StackPanel
 							Orientation="Horizontal">
 							<Label
-								Content="ATTACKS PER ROUND: " />
+								Content="ATTACKS PER ROUND: "
+								FontSize="8" />
 							<TextBox />
 						</StackPanel>
 					</StackPanel>
@@ -141,9 +155,11 @@
 			Click="AddEncounter" />
 		<WrapPanel
 			Name="wrappanel"
-			Grid.Row="1">
+			Grid.Row="1"
+			HorizontalAlignment="Stretch">
 			<ContentPresenter
-				Content="{StaticResource encounter}" />
+				Content="{StaticResource encounter}" 
+				Margin="5,0,0,5"/>
 		</WrapPanel>
 	</Grid>
 </Controls:MetroWindow>

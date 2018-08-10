@@ -33,6 +33,7 @@ namespace FourAgainstDarkness.Views
 			ContentPresenter content = new ContentPresenter();
 			Border brd = new Border();
 			brd = (Border)FindResource("encounter");
+			content.Margin=new Thickness(5,0,0,5);
 			content.Content=brd;
 			wrappanel.Children.Add(content);
 			

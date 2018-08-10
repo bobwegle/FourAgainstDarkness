@@ -181,11 +181,12 @@ namespace FourAgainstDarkness.Model
 					break;
 					
 				case "Barbarian":
-
+					_attackbonus=_level;
 					break;
 										
 				case "Cleric":
-
+					_attackbonus=Convert.ToInt16(.5*_level);
+					_attacknotes=_attacknotes+" Add full level if attacking undead.";
 					break;
 										
 				case "Dwarf":
