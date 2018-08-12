@@ -37,7 +37,7 @@ namespace FourAgainstDarkness.Views
 		void CharSheetButton_Click(object sender, RoutedEventArgs e)
 		{
 			CharacterSheet  _charactersheet = new CharacterSheet();
-			_charactersheet.ShowDialog();
+			_charactersheet.Show();
 		}
 		void OpenMonsterSheet(object sender, RoutedEventArgs e)
 		{

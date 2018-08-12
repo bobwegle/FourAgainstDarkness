@@ -312,7 +312,8 @@ namespace FourAgainstDarkness.Model
 				_cleric.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Light Armor")));
 				_cleric.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Shield")));
 				_cleric.Equipnotes = "May trade Shield and Sword for Two-Handed Sword. May use Shield, Light Armor, Heavy Armor. Weapons are hand weapon, two handed, sling. May use up to 3 blessing or healing spells.";
-				_cleric.Life=_cleric.Newcleric.Calculatelife(1);				
+				_cleric.Life=_cleric.Newcleric.Calculatelife(1);
+				_cleric.Notes="Cleric starts with 3 blessing and 3 healing spells. Healing is d6 + level. Healing can be done on anyone, anytime. Is used as turn during battle. All spells cast as level 1 except blessing.";
 				return _cleric;
 			}
 			
@@ -323,7 +324,8 @@ namespace FourAgainstDarkness.Model
 				_rogue.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Light Armor")));
 				_rogue.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Dagger")));
 				_rogue.Equipnotes = "Light armor allowed, light weapon or sling allowed";
-				_rogue.Life=_rogue.Newrogue.Calculatelife(1);				
+				_rogue.Life=_rogue.Newrogue.Calculatelife(1);
+				_rogue.Notes="Adds level to disarm traps";
 				return _rogue;
 			}
 			
@@ -333,7 +335,8 @@ namespace FourAgainstDarkness.Model
 				_wizard.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Writing Implements")));
 				_wizard.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Wizard Staff")));
 				_wizard.Equipnotes = "Choose 2 spells + 1 spell per level as default";
-				_wizard.Life=_wizard.Newwizard.Calculatelife(1);				
+				_wizard.Life=_wizard.Newwizard.Calculatelife(1);
+				_wizard.Notes="Add level when using spells, puzzles or riddles";
 				return _wizard;
 			}
 			
@@ -343,7 +346,8 @@ namespace FourAgainstDarkness.Model
 				_elf.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Short Sword")));
 				_elf.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Bow")));
 				_elf.Equipnotes = "May use any weapon, shield, light armor or heavy armor. May buy and cast 1 spell/level/game with light armor and no shield.";
-				_elf.Life=_elf.Newelf.Calculatelife(1);				
+				_elf.Life=_elf.Newelf.Calculatelife(1);	
+				_elf.Notes="Adds level to spell rolls. May cast 1 spell/level/adventure if wearing light armor and not using shield. Shield can be carried on back, use one attack to put in hand.";
 				return _elf;
 			}
 			
@@ -353,7 +357,8 @@ namespace FourAgainstDarkness.Model
 				_dwarf.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Sword")));
 				_dwarf.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Shield")));
 				_dwarf.Equipnotes = "May trade all default for Heavy Armor and Two-Handed Weapon.";
-				_dwarf.Life=_dwarf.Newdwarf.Calculatelife(1);				
+				_dwarf.Life=_dwarf.Newdwarf.Calculatelife(1);
+				_dwarf.Notes="On meeting monster, d6+level. 6 or better, roll on treasure before attack. If party has 2 or more Dwarves, can not bribe. 20% more for gem and jewelry sales for any character.";
 				return _dwarf;
 				
 			}
@@ -363,7 +368,8 @@ namespace FourAgainstDarkness.Model
 				_halfling.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Sling")));
 				_halfling.Equipmentcarried.Add(MainClass.Equipmentlist.Find(x=>x.Name.Equals("Short Sword")));
 				_halfling.Equipnotes = "Light hand weapons, sling, Light Armor allowed.";
-				_halfling.Life=_halfling.Newhalfling.Calculatelife(1);				
+				_halfling.Life=_halfling.Newhalfling.Calculatelife(1);
+				_halfling.Notes="Luck points=Level+1. Use to run away from attack, re-roll attack, defense, search, treasure/magical treasure table. Re-roll stands.";
 				return _halfling;
 			}
 			return null;

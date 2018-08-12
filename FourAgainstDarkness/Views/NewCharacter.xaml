@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.NewCharacter" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	Title="FourAgainstDarkness.Views"
+	Title="Build Character"
 	Width="300"
 	Height="NaN" xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 	BorderThickness="0"
 	GlowBrush="Black"
 	ResizeMode="CanResizeWithGrip"
 	WindowTransitionsEnabled="False"
-	WindowStartupLocation="CenterScreen">
+	WindowStartupLocation="CenterScreen" >
 	<Grid>
 		<StackPanel
 			Orientation="Vertical"

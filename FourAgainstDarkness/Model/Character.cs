@@ -44,6 +44,7 @@ namespace FourAgainstDarkness.Model
 		private string _equipattacknotes;
 		private int _equipdefensebonus;
 		private string _equipdefensenotes;
+		private string _notes;
 		
 		
 		public Character()
@@ -182,6 +183,7 @@ namespace FourAgainstDarkness.Model
 					
 				case "Barbarian":
 					_attackbonus=_level;
+					_attacknotes="Rage attack 1/adventure. Best of 3 rolls. 2 wounds to boss.";
 					break;
 										
 				case "Cleric":
@@ -190,11 +192,13 @@ namespace FourAgainstDarkness.Model
 					break;
 										
 				case "Dwarf":
-
+					_attackbonus = _level;
+					_attacknotes="Except for ranged weapons. +1 against goblins";
 					break;
 					
 				case "Elf":
-
+					_attackbonus=_level;
+					_attacknotes="Only if not using two-handed weapon. +1 to attack or spell when fighting orcs.";
 					break;
 					
 				case "Halfling":
@@ -202,7 +206,8 @@ namespace FourAgainstDarkness.Model
 					break;
 					
 				case "Rogue":
-
+					_attackbonus=_level;
+					_attacknotes="Bonus only added when attacking outnumbered minion";
 					break;
 					
 				case "Wizard":
@@ -229,7 +234,8 @@ namespace FourAgainstDarkness.Model
 					break;
 										
 				case "Dwarf":
-
+					_defensebonus=1;
+					_defensenotes="Only agains trolls, ogres and giants";
 					break;
 					
 				case "Elf":
@@ -237,11 +243,12 @@ namespace FourAgainstDarkness.Model
 					break;
 					
 				case "Halfling":
-
+					_defensebonus=_level;
+					_defensenotes="Only against giants, trolls, ogres";
 					break;
 					
 				case "Rogue":
-
+					_defensebonus=_level;
 					break;
 					
 				case "Wizard":
@@ -501,7 +508,17 @@ namespace FourAgainstDarkness.Model
 				_equipattacknotes = value;
 			}
 		}		
+
+		public string Notes {
+			get {
+				return _notes;
+			}
+			set {
+				_notes = value;
+			}
+		}
 	
+		
 		
 	}
 	

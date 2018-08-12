@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Controls:MetroWindow
 	x:Class="FourAgainstDarkness.Views.CharacterSheet" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	Title="FourAgainstDarkness.Views" xmlns:local="clr-namespace:FourAgainstDarkness"
+	Title="Character Tracker" xmlns:local="clr-namespace:FourAgainstDarkness"
 	Width="1000"
 	Height="750" xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 	BorderThickness="0"
@@ -434,7 +434,8 @@
 							FontWeight="Bold" />
 						<TextBox
 							TextWrapping="WrapWithOverflow"
-							VerticalScrollBarVisibility="Auto" />
+							VerticalScrollBarVisibility="Auto" 
+							Text="{Binding Path=Notes}"/>
 						<Label
 							Content="Quest"
 							HorizontalContentAlignment="Center"
@@ -852,7 +853,8 @@
 						FontWeight="Bold" />
 					<TextBox
 						TextWrapping="WrapWithOverflow"
-						VerticalScrollBarVisibility="Auto" />
+						VerticalScrollBarVisibility="Auto" 
+						Text="{Binding Path=Notes}"/>
 					<Label
 						Content="Quest"
 						HorizontalContentAlignment="Center"
@@ -1268,7 +1270,8 @@
 						FontWeight="Bold" />
 					<TextBox
 						TextWrapping="WrapWithOverflow"
-						VerticalScrollBarVisibility="Auto" />
+						VerticalScrollBarVisibility="Auto"
+						Text="{Binding Path=Notes}"/>
 					<Label
 						Content="Quest"
 						HorizontalContentAlignment="Center"
@@ -1684,7 +1687,8 @@
 						FontWeight="Bold" />
 					<TextBox
 						TextWrapping="WrapWithOverflow"
-						VerticalScrollBarVisibility="Auto" />
+						VerticalScrollBarVisibility="Auto"
+						Text="{Binding Path=Notes}"					/>
 					<Label
 						Content="Quest"
 						HorizontalContentAlignment="Center"
